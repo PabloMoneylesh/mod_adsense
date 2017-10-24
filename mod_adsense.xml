@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" method="upgrade" client="site">
+	<name>Adsense</name>
+	<creationDate>10.08.2017</creationDate>
+	<author>Pablo Moneylesh</author>
+	<authorEmail>pablomoneylesh@gmail.com</authorEmail>
+	<authorUrl></authorUrl>
+	<copyright>Copyright © 2016 - All rights reserved.</copyright>
+	<license>GNU General Public License v2.0</license>
+	<version>0.0.1</version>
+	<description>container for google adsense code</description>
+	<files>
+		<filename module="mod_adsense">mod_adsense.php</filename>		
+	</files>	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			<field
+					name="script"
+					type="textarea"					
+					cols="40"
+					rows="1"
+					label="Ad Script"
+					filter="raw"
+					description="Paste the link to adsbygoogle.js or live emty" />
+					
+				<field
+					name="adcode"
+					type="textarea"					
+					cols="40"
+					rows="10"
+					label="Ad Code"
+					filter="raw"
+					description="Paste Ad Code Here" />
+			</fieldset>		
+			<fieldset name="advanced">
+			<field
+				name="cache"
+						type="list"
+						default="1"
+						label="COM_MODULES_FIELD_CACHING_LABEL"
+						description="COM_MODULES_FIELD_CACHING_DESC">
+						<option
+							   value="1">JGLOBAL_USE_GLOBAL</option>
+						<option
+							   value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
